@@ -40,11 +40,13 @@ def create_app():
     def inject_layout():
         from flask import session
         if session.get('ui_version') == 2:
-            layout = 'base_2.html'
+            layout = '/bases/base_2.html'
         elif session.get('ui_version') == 3:
-            layout = 'base_3.html'
+            layout = '/bases/base_3.html'
+        # elif session.get('ui_version') == 4:
+        #     layout = '/bases/base_4.html'
         else:
-            layout = 'base.html'
+            layout = '/bases/base.html'
         return dict(base_layout=layout)
 
     return app

@@ -50,5 +50,7 @@ def redirect_to_home():
     elif version == 3:
         return redirect(url_for('home.home_3'))
     # elif version == 4:
-    #     return redirect(url_for('home.home_4'))......
+    #     return redirect(url_for('home.home_4'))
+    # elif version == 5:
+    #     return redirect(url_for('home.home_5'))......
     return redirect(url_for('home.home'))
